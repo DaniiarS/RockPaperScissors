@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rock-Paper-Scissors</title>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+
+        <div class="main-layout">
+            <div class="main-content">
+                <div class="main-content-header">
+                    <h2>Rock Paper Scissors</h2>
+                </div>
+
+                <div class="move-buttons">
+                    <button class="move-button" onclick="
+                                                        randomNumber = Math.random();
+                                                        myChoice = 'Rock';
+                                                        computerChoice = getComputerChoice(randomNumber);
+
+                                                        startGame(myChoice, computerChoice);
+                                                        updateScore();
+                                                    ">
+                            <img src="./images/rock-emoji.png" class="move-img">    
+                    </button>
+
+                    <button class="move-button" onclick="
+                                                        randomNumber = Math.random();
+                                                        myChoice = 'Paper';
+                                                        computerChoice = getComputerChoice(randomNumber);
+
+                                                        startGame(myChoice, computerChoice);
+                                                        updateScore();
+                                                    ">
+                    <img src="./images/paper-emoji.png" class="move-img">
+                    </button>
+
+                    <button class="move-button" onclick="
+                                                        randomNumber = Math.random();
+                                                        myChoice = 'Scissors';
+                                                        computerChoice = getComputerChoice(randomNumber);
+
+                                                        startGame(myChoice, computerChoice);
+                                                        updateScore();
+                                                    ">
+                    <img src="./images/scissors-emoji.png" class="move-img">
+                    </button>
+                </div>
+
+                <div class="bottom-div">
+                    <div class="results-bottom">
+                        <p class="js-result-title"></p>
+                        <p class="js-result"></p>
+                        <p class="js-score"></p>
+                    </div>
+
+                    <div class="results-reset-box">
+                        <div class="reset-button">
+                            <button onclick="
+                                            resetScores();
+                                        ">
+                                Reset Scores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
